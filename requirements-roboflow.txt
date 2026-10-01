@@ -1,0 +1,4 @@
+# 다운로드 전용 venv에서 사용: ROS/YOLO의 OpenCV 설치와 분리한다.
+roboflow==1.5.1
+numpy==1.26.4
+opencv-python-headless==4.10.0.84

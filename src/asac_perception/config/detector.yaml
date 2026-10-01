@@ -1,0 +1,22 @@
+/**:
+  ros__parameters:
+    model_path: ''  # 학습 결과 best.pt의 절대 경로를 launch 인자로 전달
+    color_topic: /camera/camera/color/image_raw
+    depth_topic: /camera/camera/aligned_depth_to_color/image_raw
+    camera_info_topic: /camera/camera/color/camera_info
+    confidence: 0.5
+    iou: 0.45
+    image_size: 416
+    device: cpu  # NVIDIA GPU: '0'
+    cpu_threads: 2  # 카메라 드라이버/ROS callback이 사용할 CPU 여유를 남긴다.
+    target_classes: ''  # 빈 문자열: 전체 클래스. COCO 사과만 탐지: 'apple'
+    max_detections: 100
+    inference_rate_hz: 5.0
+    sync_slop_sec: 0.05
+    sync_queue_size: 5
+    max_frame_age_sec: 2.0  # 촬영 시각 기준 최대 결과 age [s]; 제어 용도는 별도 검토
+    depth_roi_fraction: 0.3
+    min_depth_m: 0.2
+    max_depth_m: 6.0
+    min_depth_samples: 5
+    publish_annotated_image: true
