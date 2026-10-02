@@ -1,0 +1,169 @@
+{
+  "status": "verified",
+  "task": "detect",
+  "names": {
+    "0": "Calyx",
+    "1": "Disease",
+    "2": "Intact",
+    "3": "Miscolor",
+    "4": "Misshape",
+    "5": "Scar",
+    "6": "Stem"
+  },
+  "model_path": "/home/dshine/yolov8apple/models/imported/apple-v2/best.pt",
+  "received_file_sha256": {
+    "best.pt": "5aadadabb7f5b60ccd9797a89691f3d916c499b0584d1b7ebcf928636b637717",
+    "training_report.json": "51a9995dac4cfe8f87049ff311eca564d75cd298979449b3c85bef1a048e3c4e",
+    "args.yaml": "4e41689616ad0cceb4e148291003964bed419f11cc33d8f3400b7b4acb03ae4c",
+    "results.csv": "c7f00635235e476663fc8579ed2ef9a38450de23490c4c45a7f18a5ae70d814a"
+  },
+  "completed_epochs": 71,
+  "requested_epochs": 100,
+  "local_dataset_audit": {
+    "task": "detect",
+    "splits": {
+      "train": {
+        "images": 1102,
+        "instances": 3829,
+        "background_images": 1,
+        "missing_label_files": 0,
+        "class_counts": [
+          263,
+          1029,
+          191,
+          1062,
+          470,
+          517,
+          297
+        ]
+      },
+      "val": {
+        "images": 366,
+        "instances": 1264,
+        "background_images": 0,
+        "missing_label_files": 0,
+        "class_counts": [
+          102,
+          303,
+          69,
+          352,
+          145,
+          202,
+          91
+        ]
+      },
+      "test": {
+        "images": 366,
+        "instances": 1163,
+        "background_images": 0,
+        "missing_label_files": 0,
+        "class_counts": [
+          77,
+          326,
+          58,
+          359,
+          145,
+          102,
+          96
+        ]
+      }
+    }
+  },
+  "evaluation_split": "test",
+  "evaluation_images": 366,
+  "metrics": {
+    "metrics/precision(B)": 0.46904317073722973,
+    "metrics/recall(B)": 0.5817937567764302,
+    "metrics/mAP50(B)": 0.5003844812937183,
+    "metrics/mAP50-95(B)": 0.3157568843783992,
+    "fitness": 0.3342196440699311
+  },
+  "reported_test_metrics": {
+    "metrics/precision(B)": 0.4679809278427311,
+    "metrics/recall(B)": 0.5817937567764302,
+    "metrics/mAP50(B)": 0.49967850721498114,
+    "metrics/mAP50-95(B)": 0.3152108084158091,
+    "fitness": 0.33365757829572634
+  },
+  "absolute_metric_delta": {
+    "metrics/precision(B)": 0.0010622428944986329,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.000705974078737126,
+    "metrics/mAP50-95(B)": 0.0005460759625900979,
+    "fitness": 0.0005620657742047563
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.5680400817120662,
+    "inference": 44.55141487017356,
+    "loss": 0.0007856087606461322,
+    "postprocess": 0.579656147565998
+  },
+  "versions": {
+    "torch": "2.5.1+cpu",
+    "ultralytics": "8.3.40"
+  },
+  "input_imgsz": 640,
+  "batch": 4,
+  "device": "cpu",
+  "physical_camera_tested": false,
+  "topview_segmentation_model_changed": false,
+  "per_class": [
+    {
+      "name": "Calyx",
+      "precision": 0.771305728589963,
+      "recall": 0.922077922077922,
+      "mAP50": 0.8991991542552076,
+      "mAP50_95": 0.4894678804579368,
+      "test_instances": 77
+    },
+    {
+      "name": "Disease",
+      "precision": 0.4609684330488423,
+      "recall": 0.3343558282208589,
+      "mAP50": 0.33542784979640194,
+      "mAP50_95": 0.16265778829157448,
+      "test_instances": 326
+    },
+    {
+      "name": "Intact",
+      "precision": 0.38813398919819664,
+      "recall": 0.6896551724137931,
+      "mAP50": 0.5680831916324354,
+      "mAP50_95": 0.559789367031349,
+      "test_instances": 58
+    },
+    {
+      "name": "Miscolor",
+      "precision": 0.48440844866035104,
+      "recall": 0.5125348189415042,
+      "mAP50": 0.4611168508978297,
+      "mAP50_95": 0.19040714173876142,
+      "test_instances": 359
+    },
+    {
+      "name": "Misshape",
+      "precision": 0.4581315288594594,
+      "recall": 0.9172413793103448,
+      "mAP50": 0.6059889296413293,
+      "mAP50_95": 0.6041097149208176,
+      "test_instances": 145
+    },
+    {
+      "name": "Scar",
+      "precision": 0.08564218830436562,
+      "recall": 0.0196078431372549,
+      "mAP50": 0.040560312263512775,
+      "mAP50_95": 0.010887978401140605,
+      "test_instances": 102
+    },
+    {
+      "name": "Stem",
+      "precision": 0.6347118784994308,
+      "recall": 0.6770833333333334,
+      "mAP50": 0.5923150805693109,
+      "mAP50_95": 0.19297831980721447,
+      "test_instances": 96
+    }
+  ],
+  "detector_selection": "/home/dshine/yolov8apple/models/active_detector.json"
+}

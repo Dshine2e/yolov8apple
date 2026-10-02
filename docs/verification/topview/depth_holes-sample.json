@@ -1,0 +1,537 @@
+{
+  "stamp": {
+    "sec": 3,
+    "nanosec": 568609410
+  },
+  "camera_frame": "asac_sim_camera_optical_frame",
+  "base_frame": "base_link",
+  "camera_id": "sim_top",
+  "session_id": "fafbd5da4dc3",
+  "input_mode": "sim",
+  "view_type": "top",
+  "measurement_config": {
+    "min_mask_pixels": 100,
+    "hole_max_pixels": 8,
+    "min_solidity": 0.88,
+    "erosion_pixels": 2,
+    "min_depth_m": 0.15,
+    "max_depth_m": 3.0,
+    "depth_mad_factor": 4.5,
+    "depth_mad_floor_m": 0.008,
+    "min_depth_points": 80,
+    "min_depth_ratio": 0.3,
+    "max_fit_points": 2000,
+    "sphere_trials": 80,
+    "sphere_inlier_threshold_m": 0.003,
+    "sphere_min_inlier_ratio": 0.7,
+    "sphere_max_rmse_m": 0.003,
+    "sphere_min_radius_m": 0.015,
+    "sphere_max_radius_m": 0.09,
+    "sphere_max_condition": 100.0,
+    "sphere_min_cap_fraction": 0.12
+  },
+  "camera_metadata": {
+    "k": [
+      514.6816609222941,
+      0.0,
+      320.0,
+      0.0,
+      514.6816609222941,
+      240.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "p": [
+      514.6816609222941,
+      0.0,
+      320.0,
+      0.0,
+      0.0,
+      514.6816609222941,
+      240.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "d": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "distortion_model": "plumb_bob",
+    "width": 640,
+    "height": 480,
+    "image_state": "rectified",
+    "projection_source": "P",
+    "depth_encoding": "32FC1",
+    "depth_scale_16uc1": 0.001,
+    "depth_quantity": "optical_axis_z_m",
+    "calibration_verified": true,
+    "depth_stamp": {
+      "sec": 3,
+      "nanosec": 568609410
+    },
+    "info_stamp": {
+      "sec": 3,
+      "nanosec": 568609410
+    }
+  },
+  "processing_sec": 0.05881057900023734,
+  "observations": [
+    {
+      "mask_valid": true,
+      "reason": "",
+      "area_px": 3948,
+      "perimeter_px": 231.722869515419,
+      "radius_px": 35.449787455690135,
+      "circularity_top": 0.9239515794797037,
+      "border_clipped": false,
+      "discarded_component_pixels": 0,
+      "solidity": 0.9903474903474904,
+      "confidence": 0.47985678911209106,
+      "class_id": 47,
+      "bbox": [
+        366.570556640625,
+        270.9122314453125,
+        436.35198974609375,
+        341.8074951171875
+      ],
+      "roi": [
+        366,
+        270,
+        71,
+        72
+      ],
+      "image_width": 640,
+      "image_height": 480,
+      "view_type": "top",
+      "center_camera": null,
+      "center_base": null,
+      "surface_camera": null,
+      "surface_base": null,
+      "direction_base": null,
+      "camera_pose_base": {
+        "position": [
+          0.4,
+          0.0,
+          0.85
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "radius_m": null,
+      "diameter_m": null,
+      "center_camera_valid": false,
+      "center_base_valid": false,
+      "surface_valid": false,
+      "surface_base_valid": false,
+      "direction_valid": false,
+      "radius_valid": false,
+      "circularity_valid": true,
+      "valid_depth_ratio": 0.0,
+      "valid_depth_points": 0,
+      "depth_candidate_pixels": 3400,
+      "fit_valid": false,
+      "fit_rmse_m": null,
+      "fit_condition": null,
+      "inlier_ratio": null,
+      "cap_fraction": null,
+      "method": "robust_sphere_visible_surface",
+      "reasons": [
+        "insufficient_valid_depth"
+      ],
+      "occlusion_state": "unknown_single_view",
+      "tracking_method": "2d_iou_fallback",
+      "circularity_top_raw": 0.9239515794797037,
+      "apple_id": "fafbd5da4dc3-000001",
+      "camera_id": "sim_top",
+      "camera_frame": "asac_sim_camera_optical_frame",
+      "base_frame": "base_link",
+      "stamp": {
+        "sec": 3,
+        "nanosec": 568609410
+      },
+      "camera_metadata": {
+        "k": [
+          514.6816609222941,
+          0.0,
+          320.0,
+          0.0,
+          514.6816609222941,
+          240.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "p": [
+          514.6816609222941,
+          0.0,
+          320.0,
+          0.0,
+          0.0,
+          514.6816609222941,
+          240.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "distortion_model": "plumb_bob",
+        "width": 640,
+        "height": 480,
+        "image_state": "rectified",
+        "projection_source": "P",
+        "depth_encoding": "32FC1",
+        "depth_scale_16uc1": 0.001,
+        "depth_quantity": "optical_axis_z_m",
+        "calibration_verified": true,
+        "depth_stamp": {
+          "sec": 3,
+          "nanosec": 568609410
+        },
+        "info_stamp": {
+          "sec": 3,
+          "nanosec": 568609410
+        }
+      },
+      "measurement_config": {
+        "min_mask_pixels": 100,
+        "hole_max_pixels": 8,
+        "min_solidity": 0.88,
+        "erosion_pixels": 2,
+        "min_depth_m": 0.15,
+        "max_depth_m": 3.0,
+        "depth_mad_factor": 4.5,
+        "depth_mad_floor_m": 0.008,
+        "min_depth_points": 80,
+        "min_depth_ratio": 0.3,
+        "max_fit_points": 2000,
+        "sphere_trials": 80,
+        "sphere_inlier_threshold_m": 0.003,
+        "sphere_min_inlier_ratio": 0.7,
+        "sphere_max_rmse_m": 0.003,
+        "sphere_min_radius_m": 0.015,
+        "sphere_max_radius_m": 0.09,
+        "sphere_max_condition": 100.0,
+        "sphere_min_cap_fraction": 0.12
+      }
+    },
+    {
+      "mask_valid": true,
+      "reason": "",
+      "area_px": 2269,
+      "perimeter_px": 175.53910398483276,
+      "radius_px": 26.87461872754702,
+      "circularity_top": 0.9253299208426977,
+      "border_clipped": false,
+      "discarded_component_pixels": 0,
+      "solidity": 0.9898351027784053,
+      "confidence": 0.4172991216182709,
+      "class_id": 47,
+      "bbox": [
+        347.7596130371094,
+        167.12359619140625,
+        400.1111145019531,
+        219.550048828125
+      ],
+      "roi": [
+        347,
+        167,
+        54,
+        53
+      ],
+      "image_width": 640,
+      "image_height": 480,
+      "view_type": "top",
+      "center_camera": null,
+      "center_base": null,
+      "surface_camera": null,
+      "surface_base": null,
+      "direction_base": null,
+      "camera_pose_base": {
+        "position": [
+          0.4,
+          0.0,
+          0.85
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "radius_m": null,
+      "diameter_m": null,
+      "center_camera_valid": false,
+      "center_base_valid": false,
+      "surface_valid": false,
+      "surface_base_valid": false,
+      "direction_valid": false,
+      "radius_valid": false,
+      "circularity_valid": true,
+      "valid_depth_ratio": 0.0,
+      "valid_depth_points": 0,
+      "depth_candidate_pixels": 1865,
+      "fit_valid": false,
+      "fit_rmse_m": null,
+      "fit_condition": null,
+      "inlier_ratio": null,
+      "cap_fraction": null,
+      "method": "robust_sphere_visible_surface",
+      "reasons": [
+        "insufficient_valid_depth"
+      ],
+      "occlusion_state": "unknown_single_view",
+      "tracking_method": "2d_iou_fallback",
+      "circularity_top_raw": 0.9253299208426977,
+      "apple_id": "fafbd5da4dc3-000002",
+      "camera_id": "sim_top",
+      "camera_frame": "asac_sim_camera_optical_frame",
+      "base_frame": "base_link",
+      "stamp": {
+        "sec": 3,
+        "nanosec": 568609410
+      },
+      "camera_metadata": {
+        "k": [
+          514.6816609222941,
+          0.0,
+          320.0,
+          0.0,
+          514.6816609222941,
+          240.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "p": [
+          514.6816609222941,
+          0.0,
+          320.0,
+          0.0,
+          0.0,
+          514.6816609222941,
+          240.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "distortion_model": "plumb_bob",
+        "width": 640,
+        "height": 480,
+        "image_state": "rectified",
+        "projection_source": "P",
+        "depth_encoding": "32FC1",
+        "depth_scale_16uc1": 0.001,
+        "depth_quantity": "optical_axis_z_m",
+        "calibration_verified": true,
+        "depth_stamp": {
+          "sec": 3,
+          "nanosec": 568609410
+        },
+        "info_stamp": {
+          "sec": 3,
+          "nanosec": 568609410
+        }
+      },
+      "measurement_config": {
+        "min_mask_pixels": 100,
+        "hole_max_pixels": 8,
+        "min_solidity": 0.88,
+        "erosion_pixels": 2,
+        "min_depth_m": 0.15,
+        "max_depth_m": 3.0,
+        "depth_mad_factor": 4.5,
+        "depth_mad_floor_m": 0.008,
+        "min_depth_points": 80,
+        "min_depth_ratio": 0.3,
+        "max_fit_points": 2000,
+        "sphere_trials": 80,
+        "sphere_inlier_threshold_m": 0.003,
+        "sphere_min_inlier_ratio": 0.7,
+        "sphere_max_rmse_m": 0.003,
+        "sphere_min_radius_m": 0.015,
+        "sphere_max_radius_m": 0.09,
+        "sphere_max_condition": 100.0,
+        "sphere_min_cap_fraction": 0.12
+      }
+    },
+    {
+      "mask_valid": true,
+      "reason": "",
+      "area_px": 2940,
+      "perimeter_px": 198.75230705738068,
+      "radius_px": 30.591356056578213,
+      "circularity_top": 0.9352610270833719,
+      "border_clipped": false,
+      "discarded_component_pixels": 0,
+      "solidity": 0.9914871438498958,
+      "confidence": 0.22551840543746948,
+      "class_id": 47,
+      "bbox": [
+        238.8001708984375,
+        268.76727294921875,
+        299.11456298828125,
+        328.92120361328125
+      ],
+      "roi": [
+        238,
+        268,
+        62,
+        61
+      ],
+      "image_width": 640,
+      "image_height": 480,
+      "view_type": "top",
+      "center_camera": null,
+      "center_base": null,
+      "surface_camera": null,
+      "surface_base": null,
+      "direction_base": null,
+      "camera_pose_base": {
+        "position": [
+          0.4,
+          0.0,
+          0.85
+        ],
+        "quaternion_xyzw": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "radius_m": null,
+      "diameter_m": null,
+      "center_camera_valid": false,
+      "center_base_valid": false,
+      "surface_valid": false,
+      "surface_base_valid": false,
+      "direction_valid": false,
+      "radius_valid": false,
+      "circularity_valid": true,
+      "valid_depth_ratio": 0.0,
+      "valid_depth_points": 0,
+      "depth_candidate_pixels": 2472,
+      "fit_valid": false,
+      "fit_rmse_m": null,
+      "fit_condition": null,
+      "inlier_ratio": null,
+      "cap_fraction": null,
+      "method": "robust_sphere_visible_surface",
+      "reasons": [
+        "insufficient_valid_depth"
+      ],
+      "occlusion_state": "unknown_single_view",
+      "tracking_method": "2d_iou_fallback",
+      "circularity_top_raw": 0.9352610270833719,
+      "apple_id": "fafbd5da4dc3-000003",
+      "camera_id": "sim_top",
+      "camera_frame": "asac_sim_camera_optical_frame",
+      "base_frame": "base_link",
+      "stamp": {
+        "sec": 3,
+        "nanosec": 568609410
+      },
+      "camera_metadata": {
+        "k": [
+          514.6816609222941,
+          0.0,
+          320.0,
+          0.0,
+          514.6816609222941,
+          240.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "p": [
+          514.6816609222941,
+          0.0,
+          320.0,
+          0.0,
+          0.0,
+          514.6816609222941,
+          240.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "distortion_model": "plumb_bob",
+        "width": 640,
+        "height": 480,
+        "image_state": "rectified",
+        "projection_source": "P",
+        "depth_encoding": "32FC1",
+        "depth_scale_16uc1": 0.001,
+        "depth_quantity": "optical_axis_z_m",
+        "calibration_verified": true,
+        "depth_stamp": {
+          "sec": 3,
+          "nanosec": 568609410
+        },
+        "info_stamp": {
+          "sec": 3,
+          "nanosec": 568609410
+        }
+      },
+      "measurement_config": {
+        "min_mask_pixels": 100,
+        "hole_max_pixels": 8,
+        "min_solidity": 0.88,
+        "erosion_pixels": 2,
+        "min_depth_m": 0.15,
+        "max_depth_m": 3.0,
+        "depth_mad_factor": 4.5,
+        "depth_mad_floor_m": 0.008,
+        "min_depth_points": 80,
+        "min_depth_ratio": 0.3,
+        "max_fit_points": 2000,
+        "sphere_trials": 80,
+        "sphere_inlier_threshold_m": 0.003,
+        "sphere_min_inlier_ratio": 0.7,
+        "sphere_max_rmse_m": 0.003,
+        "sphere_min_radius_m": 0.015,
+        "sphere_max_radius_m": 0.09,
+        "sphere_max_condition": 100.0,
+        "sphere_min_cap_fraction": 0.12
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "model": "/home/dshine/yolov8apple/models/imported/apple-v2/best.pt",
+  "actual_rgb_source": "datasets/apple-v2/test/images/003_JPG.rf.dd55138ed34db7171bf8a66081fa6034.jpg",
+  "image_size": [
+    640,
+    960
+  ],
+  "ros_domain_id": "187",
+  "topics": [
+    "/asac/detections",
+    "/asac/annotated_image"
+  ],
+  "expected_min_detections": 1,
+  "frame": "test_rgb_optical_frame",
+  "stamp": {
+    "sec": 1790919860,
+    "nanosec": 376839766
+  },
+  "detections": [
+    {
+      "class_name": "Disease",
+      "confidence": 0.7379045486450195,
+      "bbox_xyxy": [
+        423.8863220214844,
+        475.1290283203125,
+        476.0832824707031,
+        541.9143676757812
+      ],
+      "depth_valid": false,
+      "camera_position_m": null
+    },
+    {
+      "class_name": "Misshape",
+      "confidence": 0.595310628414154,
+      "bbox_xyxy": [
+        108.79339599609375,
+        269.8129577636719,
+        531.0763549804688,
+        660.7194213867188
+      ],
+      "depth_valid": false,
+      "camera_position_m": null
+    }
+  ],
+  "depth_input": "all-zero synthetic input; no metric geometry tested",
+  "intrinsics": "synthetic test metadata; physical camera calibration not tested",
+  "physical_camera_started": false
+}

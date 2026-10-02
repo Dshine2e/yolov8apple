@@ -1,0 +1,5 @@
+-r requirements.txt
+scipy==1.11.4
+pybullet==3.2.7
+setuptools==68.2.2
+pytest==7.4.4

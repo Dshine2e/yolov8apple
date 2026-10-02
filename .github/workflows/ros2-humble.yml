@@ -10,7 +10,8 @@ jobs:
         shell: bash
         run: |
           apt-get update
-          apt-get install -y python3-colcon-common-extensions python3-pytest python3-numpy python3-opencv python3-yaml ros-humble-cv-bridge ros-humble-message-filters ros-humble-realsense2-camera
+          apt-get install -y python3-colcon-common-extensions python3-pytest python3-pip python3-numpy python3-scipy python3-opencv python3-yaml ros-humble-cv-bridge ros-humble-message-filters ros-humble-realsense2-camera
+          python3 -m pip install pybullet==3.2.7 'pytest<8' 'setuptools<70'
       - name: Build
         shell: bash
         run: |

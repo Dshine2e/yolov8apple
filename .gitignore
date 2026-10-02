@@ -15,6 +15,8 @@ models/*
 *.onnx
 *.engine
 .env
+src/asac_perception/resource/*.zip
+*:Zone.Identifier
 *.bag
 *.db3
 *.mcap

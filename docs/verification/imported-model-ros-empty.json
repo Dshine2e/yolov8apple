@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "model": "/home/dshine/yolov8apple/models/imported/apple-v2/best.pt",
+  "actual_rgb_source": "/home/dshine/yolov8apple/datasets/apple-v2/test/images/003_JPG.rf.0d706fc66647743d2d8601ca3c9b0a38.jpg",
+  "image_size": [
+    640,
+    960
+  ],
+  "ros_domain_id": "187",
+  "topics": [
+    "/asac/detections",
+    "/asac/annotated_image"
+  ],
+  "expected_min_detections": 0,
+  "frame": "test_rgb_optical_frame",
+  "stamp": {
+    "sec": 1790919865,
+    "nanosec": 941926407
+  },
+  "detections": [],
+  "depth_input": "all-zero synthetic input; no metric geometry tested",
+  "intrinsics": "synthetic test metadata; physical camera calibration not tested",
+  "physical_camera_started": false
+}

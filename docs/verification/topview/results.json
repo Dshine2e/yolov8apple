@@ -1,0 +1,624 @@
+{
+  "date": "2026-10-02",
+  "tolerances_before_test": {
+    "sphere_center_m": 0.008,
+    "sphere_radius_m": 0.005,
+    "apple_center_m": 0.015,
+    "apple_radius_m": 0.008,
+    "match_gate_m": 0.08,
+    "min_match_ratio": 0.8
+  },
+  "cases": {
+    "nano": {
+      "baseline": {
+        "expected": "accuracy",
+        "passed": true,
+        "capture_count": 32,
+        "detected_instances": 96,
+        "match_ratio": 1.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.09682479300022351,
+        "processing_max_sec": 0.12230820600007064,
+        "center_error_max_m": 0.008053685959623028,
+        "radius_error_max_m": 0.0040109257927417805,
+        "crop_contract_errors": [],
+        "overlay_count": 32,
+        "marker_count": 32,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "single_apple": {
+        "expected": "accuracy",
+        "passed": false,
+        "capture_count": 32,
+        "detected_instances": 0,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.04693383399990125,
+        "processing_max_sec": 0.05631184300000314,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 32,
+        "marker_count": 32,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "sphere": {
+        "expected": "accuracy",
+        "passed": false,
+        "capture_count": 35,
+        "detected_instances": 0,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.049946363999879395,
+        "processing_max_sec": 0.08386435199963671,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 35,
+        "marker_count": 35,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "position_size_change": {
+        "expected": "accuracy",
+        "passed": true,
+        "capture_count": 21,
+        "detected_instances": 63,
+        "match_ratio": 1.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.10504954599991834,
+        "processing_max_sec": 0.14555391200019585,
+        "center_error_max_m": 0.008577748189058505,
+        "radius_error_max_m": 0.004187930726089389,
+        "crop_contract_errors": [],
+        "overlay_count": 21,
+        "marker_count": 21,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "overlap": {
+        "expected": "report",
+        "passed": null,
+        "capture_count": 27,
+        "detected_instances": 27,
+        "match_ratio": 0.3333333333333333,
+        "id_switches": 0,
+        "processing_median_sec": 0.06576185599988094,
+        "processing_max_sec": 0.10342612200020085,
+        "center_error_max_m": 0.008689314659982052,
+        "radius_error_max_m": 0.004306801916863355,
+        "crop_contract_errors": [],
+        "overlay_count": 27,
+        "marker_count": 27,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "occlusion": {
+        "expected": "report",
+        "passed": null,
+        "capture_count": 24,
+        "detected_instances": 48,
+        "match_ratio": 0.6666666666666666,
+        "id_switches": 0,
+        "processing_median_sec": 0.08622842599993419,
+        "processing_max_sec": 0.11171824799976093,
+        "center_error_max_m": 0.008523919149957173,
+        "radius_error_max_m": 0.004137891356306822,
+        "crop_contract_errors": [],
+        "overlay_count": 24,
+        "marker_count": 24,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "add_remove": {
+        "expected": "report",
+        "passed": null,
+        "capture_count": 32,
+        "detected_instances": 76,
+        "match_ratio": 0.8837209302325582,
+        "id_switches": 1,
+        "processing_median_sec": 0.093078923000121,
+        "processing_max_sec": 0.1518765020000501,
+        "center_error_max_m": 0.008730270984624885,
+        "radius_error_max_m": 0.004298785949596658,
+        "crop_contract_errors": [],
+        "overlay_count": 32,
+        "marker_count": 32,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "missed_sensor_frames": {
+        "expected": "accuracy",
+        "passed": true,
+        "capture_count": 26,
+        "detected_instances": 78,
+        "match_ratio": 1.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.10393029200008641,
+        "processing_max_sec": 0.14071761600007449,
+        "center_error_max_m": 0.008053685959623028,
+        "radius_error_max_m": 0.0040109257927417805,
+        "crop_contract_errors": [],
+        "overlay_count": 26,
+        "marker_count": 26,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "depth_holes": {
+        "expected": "invalid_geometry",
+        "passed": true,
+        "capture_count": 28,
+        "detected_instances": 84,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.06507693549997384,
+        "processing_max_sec": 0.07185346900041623,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 28,
+        "marker_count": 28,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [
+          "insufficient_valid_depth"
+        ],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "uncalibrated_intrinsics": {
+        "expected": "invalid_geometry",
+        "passed": true,
+        "capture_count": 36,
+        "detected_instances": 108,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.06333249499994054,
+        "processing_max_sec": 0.09655182100004822,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 36,
+        "marker_count": 36,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [
+          "invalid_rectified_projection_matrix"
+        ],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "depth_unit_error": {
+        "expected": "invalid_geometry",
+        "passed": true,
+        "capture_count": 30,
+        "detected_instances": 90,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.06438976050003475,
+        "processing_max_sec": 0.08435089800013884,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 30,
+        "marker_count": 30,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [
+          "insufficient_valid_depth"
+        ],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "missing_tf": {
+        "expected": "invalid_base",
+        "passed": true,
+        "capture_count": 23,
+        "detected_instances": 69,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.1749915929999588,
+        "processing_max_sec": 0.1969730509999863,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 23,
+        "marker_count": 23,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [
+          "tf_capture_lookup_failed:LookupException:\"asac_sim_camera_optical_frame\" passed to lookupTransform argument source_frame does not exist. "
+        ],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf_error": "\"asac_sim_camera_optical_frame\" passed to lookupTransform argument source_frame does not exist. "
+      },
+      "delayed_input": {
+        "expected": "stale",
+        "passed": true,
+        "capture_count": 0,
+        "detected_instances": 0,
+        "match_ratio": 0,
+        "id_switches": 0,
+        "processing_median_sec": null,
+        "processing_max_sec": null,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 0,
+        "marker_count": 0,
+        "statuses": [
+          "stale_or_future_input"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null
+      },
+      "changed_frame": {
+        "expected": "changed_frame",
+        "passed": true,
+        "capture_count": 29,
+        "detected_instances": 87,
+        "match_ratio": 0.1724137931034483,
+        "id_switches": 0,
+        "processing_median_sec": 0.060462572000233195,
+        "processing_max_sec": 0.1061048460001075,
+        "center_error_max_m": 0.008053685959623028,
+        "radius_error_max_m": 0.0040109257927417805,
+        "crop_contract_errors": [],
+        "overlay_count": 29,
+        "marker_count": 29,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [
+          "unexpected_optical_frame",
+          "unexpected_or_unspecified_optical_frame"
+        ],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf_error": "\"asac_sim_camera_optical_frame_changed\" passed to lookupTransform argument source_frame does not exist. "
+      }
+    },
+    "small": {
+      "single_apple": {
+        "expected": "accuracy",
+        "passed": true,
+        "capture_count": 32,
+        "detected_instances": 32,
+        "match_ratio": 1.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.18788159499990797,
+        "processing_max_sec": 0.23428645400008463,
+        "center_error_max_m": 0.007472796588040001,
+        "radius_error_max_m": 0.0037606442211640043,
+        "crop_contract_errors": [],
+        "overlay_count": 32,
+        "marker_count": 32,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "overlap": {
+        "expected": "report",
+        "passed": null,
+        "capture_count": 35,
+        "detected_instances": 0,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.18082851300005132,
+        "processing_max_sec": 0.24514817899989794,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 35,
+        "marker_count": 35,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "final_nano": {
+      "baseline": {
+        "expected": "accuracy",
+        "passed": true,
+        "capture_count": 31,
+        "detected_instances": 93,
+        "match_ratio": 1.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.10089558800018494,
+        "processing_max_sec": 0.14696639500016317,
+        "center_error_max_m": 0.008053685959623028,
+        "radius_error_max_m": 0.0040109257927417805,
+        "crop_contract_errors": [],
+        "overlay_count": 31,
+        "marker_count": 31,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "depth_holes": {
+        "expected": "invalid_geometry",
+        "passed": true,
+        "capture_count": 31,
+        "detected_instances": 93,
+        "match_ratio": 0.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.06068390399968848,
+        "processing_max_sec": 0.08999460499990164,
+        "center_error_max_m": null,
+        "radius_error_max_m": null,
+        "crop_contract_errors": [],
+        "overlay_count": 31,
+        "marker_count": 31,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [
+          "insufficient_valid_depth"
+        ],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "release_nano": {
+      "baseline": {
+        "expected": "accuracy",
+        "passed": true,
+        "capture_count": 31,
+        "detected_instances": 93,
+        "match_ratio": 1.0,
+        "id_switches": 0,
+        "processing_median_sec": 0.10366428199995426,
+        "processing_max_sec": 0.14822022099997412,
+        "center_error_max_m": 0.008053685959623028,
+        "radius_error_max_m": 0.0040109257927417805,
+        "crop_contract_errors": [],
+        "overlay_count": 31,
+        "marker_count": 31,
+        "statuses": [
+          "ok"
+        ],
+        "reasons": [],
+        "launch_returncode_before_shutdown": null,
+        "capture_tf": {
+          "translation": [
+            0.4,
+            0.0,
+            0.85
+          ],
+          "quaternion_xyzw": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

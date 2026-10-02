@@ -1,0 +1,6 @@
+# Install the GPU-specific PyTorch wheel first (see docs/EXTERNAL_TRAINING.md).
+# These versions match the ROS workspace's YOLOv8 checkpoint loader.
+numpy==1.26.4
+opencv-python==4.10.0.84
+ultralytics==8.3.40
+PyYAML>=6.0,<7

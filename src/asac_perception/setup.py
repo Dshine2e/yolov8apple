@@ -22,6 +22,7 @@ setup(
     license='Apache-2.0',
     entry_points={'console_scripts': [
         'detector = asac_perception.detector_node:main',
+        'topview = asac_perception.topview_node:main',
         'train = asac_perception.train:main',
     ]},
 )

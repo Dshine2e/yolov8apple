@@ -1,5 +1,28 @@
 # ASAC — D455 RGB-D / YOLOv8 객체 탐지
 
+고정 탑뷰 **YOLOv8-seg / PiPER RGB-D 시뮬레이션**을 추가했습니다.
+Ubuntu 22.04 / ROS 2 Humble에서 빌드·실행한 구성, sim/real 명령, 관측 메시지와
+실제 모델 검증 결과는 [탑뷰 실행 안내](docs/TOPVIEW.md)와
+[탑뷰 검증 기록](docs/TOPVIEW_VERIFICATION.md)에 있습니다.
+기존 `detector`, `d455_yolo.launch.py`, `scripts/run_detector.sh`는 보존했습니다.
+아래의 이전 Jazzy/D455 장치 실행 기록은 현재 환경의 장치 연결 상태를 뜻하지 않습니다.
+
+```bash
+cd /home/dshine/yolov8apple
+bash scripts/run_topview.sh sim models/yolov8n-seg.pt
+```
+
+새 clone에서는 아래 문서의 설치·가중치 준비·빌드 과정을 먼저 수행합니다.
+탑뷰 구현은 인식과 관측 출력까지이며 품질 판정·MoveIt·하드웨어 제어를 시작하지 않습니다.
+
+기존 Roboflow `rita-kmex0/apple-fbyiy` v2의 다운로드 → YOLOv8 학습 → `best.pt`
+평가 → 기존 검출 실행에 적용하는 명령은 [Roboflow 학습 안내](docs/ROBOFLOW_TRAINING.md)에 있습니다.
+로컬 ZIP의 1,834장을 `datasets/apple-v2`에 풀어 라벨·파일 무결성 검증을 완료했습니다.
+전달받은 `models/imported/apple-v2/best.pt`와 학습 기록을 검증하고 기본 검출 모델로 선택했습니다.
+로컬 test 366장 재평가: **mAP50 0.5004 / mAP50–95 0.3158**.
+[받은 모델 검증 기록](docs/IMPORTED_MODEL_VERIFICATION.md)에 성능·실행 명령과 한계를 기록했습니다.
+이 데이터셋은 7개 클래스의 **object detection** 데이터이므로 탑뷰 분할 모델을 대체하지 않습니다.
+
 Ubuntu 22.04, ROS 2 Humble, Python 3.10 기준의 ROS 2 워크스페이스입니다.
 RealSense D455의 RGB 영상으로 객체를 탐지하고 RGB에 정렬된 깊이 영상에서
 거리 및 카메라 좌표계의 3차원 위치를 추정합니다.
@@ -11,18 +34,18 @@ YOLOv8을 학습한 `best.pt`가 필요합니다. 클래스 이름과 ID는 실�
 
 ## 현재 상태에서 바로 실행
 
-Roboflow 다운로드는 사용자 요청으로 중단했습니다. 불완전한 파일은
-`datasets/apple-v2-incomplete/roboflow.zip`에 보존했으며 학습에는 사용하지 않습니다.
-현재 PC에는 완전히 다운로드된 `models/yolov8n.pt`와 실행용 `.venv`, 빌드 결과가 있습니다.
-이 기본 COCO 모델의 `apple` 클래스만 탐지하는 실행 명령입니다.
+현재 환경은 Ubuntu 22.04 / ROS 2 Humble이며 기본 실행은 전달받은 7개 클래스의
+YOLOv8n 검출 모델을 선택합니다. RealSense 드라이버가 이미 실행 중이거나 외부 RGB-D
+입력을 쓸 때는 다음 명령으로 인식 노드만 실행합니다.
 
 ```bash
-cd ~/ASAC
-bash scripts/run_detector.sh
+cd /home/dshine/yolov8apple
+bash scripts/run_detector.sh start_camera:=false image_size:=640
 ```
 
-이 PC에서는 기존 ROS 환경의 Jazzy를 사용합니다. Ubuntu 22.04 / Humble 장비에서는
-아래 설치·빌드를 마친 뒤 `ASAC_ROS_DISTRO=humble bash scripts/run_detector.sh`로 실행합니다.
+현재 WSL에서는 `realsense2_camera` 패키지와 물리 카메라 입력을 확인하지 못했습니다.
+드라이버·장치를 준비한 환경에서는 `start_camera:=false`를 생략해 카메라도 시작합니다.
+이전 Jazzy 장치 실행 기록은 현재 Humble 환경의 상태를 나타내지 않습니다.
 스크립트는 데이터를 다운로드하거나 학습하지 않습니다. 가중치 파일은 Git에서 제외되므로
 새 clone에는 직접 준비해야 합니다. 이미 카메라 드라이버가 실행 중이면 다음처럼 실행합니다.
 
@@ -30,10 +53,10 @@ bash scripts/run_detector.sh
 bash scripts/run_detector.sh models/yolov8n.pt start_camera:=false
 ```
 
-이 모델은 지정 Roboflow 데이터셋으로 학습된 모델이 아닙니다. 커스텀 `best.pt`가 준비되면
-`bash scripts/run_detector.sh /절대/경로/best.pt`로 교체합니다. 이때 클래스 이름이 `apple`과
-다르면 `target_classes:=실제클래스이름`을 추가하거나 `target_classes:=''`로 전체 클래스를
-선택합니다. 모델 이름과 맞지 않는 클래스는 시작 시 명확한 오류로 표시합니다.
+위의 명시적 `models/yolov8n.pt`는 COCO 모델을 사용하는 기존 실행 방식입니다.
+일부 학습 클래스만 보려면 `target_classes:=Intact`처럼 실제 model.names의 이름을 지정합니다.
+전체 클래스는 기본 선택으로 실행하거나 명시적 모델 경로와 함께 `ASAC_TARGET_CLASSES=''`를
+환경변수로 지정합니다. ROS launch CLI에는 빈 `target_classes:=` 인자를 전달하지 않습니다.
 
 ## 설치와 빌드
 
@@ -99,8 +122,9 @@ unset ROBOFLOW_API_KEY
 ```
 
 스크립트는 `rita-kmex0` → `apple-fbyiy` → version `2` → `yolov8`을 요청하며
-비어 있지 않은 출력 폴더에는 덮어쓰지 않습니다. 인증 키를 코드/명령 이력/`.env` 파일에
-작성하지 않습니다. SDK 오류는 인증 키를 가린 후 실패 상태로 반환합니다.
+비어 있지 않은 출력 폴더에는 덮어쓰지 않습니다. 인증 키는 코드/명령 이력에 넣지 않습니다.
+환경변수 또는 Git에서 제외되는 로컬 `.env`에 저장할 수 있습니다. `.env`는 셸로 실행하지 않고
+지원되는 두 값만 읽습니다. SDK 오류는 인증 키를 가린 후 실패 상태로 반환합니다.
 
 ```bash
 cd ~/ASAC

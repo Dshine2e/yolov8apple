@@ -1,0 +1,45 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ''
+  Global Options:
+    Fixed Frame: asac_sim_world
+    Frame Rate: 15
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+    - Class: rviz_default_plugins/RobotModel
+      Name: PiPER
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /asac_sim/robot_description
+        Durability Policy: Transient Local
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Table Tray Camera
+      Enabled: true
+      Topic:
+        Value: /asac_sim/scene_markers
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Apple measurements
+      Enabled: true
+      Topic:
+        Value: /asac/markers
+    - Class: rviz_default_plugins/Image
+      Name: Recognition overlay
+      Enabled: true
+      Topic:
+        Value: /asac/overlay
+        Reliability Policy: Reliable
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 1.8
+      Pitch: 0.7
+      Yaw: 0.7
+      Focal Point: {X: 0.35, Y: 0, Z: 0.2}
